@@ -24,3 +24,20 @@
 .bg-violet {
   background-color: hsl(257, 27%, 26%) !important;
 }
+
+.hide-des {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 375px) {
+  .hide-m {
+    display: none;
+    visibility: hidden;
+  }
+
+  .show-m {
+    display: block;
+    visibility: visible;
+  }
+}
