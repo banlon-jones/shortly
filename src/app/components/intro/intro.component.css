@@ -1,0 +1,49 @@
+.intro-text {
+  background-image: url("src/assets/images/illustration-working.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right;
+  padding-top: 5rem;
+}
+
+.intro {
+  width: 600px;
+}
+
+.intro p {
+  width: 400px;
+}
+
+.intro-heading {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+  .intro-text {
+    background: none;
+    padding-top: 7rem;
+  }
+
+  .intro {
+    width: auto;
+  }
+
+  .intro p {
+    width: auto;
+  }
+
+  .intro-heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .intro-text {
+    padding-top: 2rem;
+    text-align: center;
+  }
+   .img {
+     height: 300px;
+   }
+
+}
