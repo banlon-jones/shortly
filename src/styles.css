@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.google.com/specimen/Poppins");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.google.com/specimen/Poppins");
+  font-weight: 700;
+}
+
+* {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.bg-cyan {
+  background-color: hsl(180, 66%, 49%) !important;
+}
+
+.bg-violet {
+  background-color: hsl(257, 27%, 26%) !important;
+}
