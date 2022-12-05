@@ -1,0 +1,22 @@
+.bg-card {
+  background-image: url("src/assets/images/bg-shorten-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(257, 27%, 26%);
+}
+
+.form-container {
+  z-index: 5;
+  margin-top: -623px;
+}
+
+@media screen and (max-width: 375px) {
+  .bg-card {
+    background-image: url("src/assets/images/bg-shorten-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 27%, 26%);
+  }
+}

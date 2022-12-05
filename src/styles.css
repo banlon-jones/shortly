@@ -21,6 +21,22 @@
   background-color: hsl(180, 66%, 49%) !important;
 }
 
+.text-cyan {
+  color: hsl(180, 66%, 49%) !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bg-gray {
+  background-color: hsl(0, 0%, 75%) !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .bg-violet {
   background-color: hsl(257, 27%, 26%) !important;
 }
@@ -39,5 +55,9 @@
   .show-m {
     display: block;
     visibility: visible;
+  }
+
+  .text-center-m {
+    text-align: center;
   }
 }

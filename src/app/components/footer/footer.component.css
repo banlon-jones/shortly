@@ -1,0 +1,9 @@
+footer{
+  background-color: hsl(260, 8%, 14%);
+}
+.columns{
+  margin-top: 6.5rem;
+}
+@media screen and (max-width: 475px){
+
+}
