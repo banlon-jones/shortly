@@ -1,0 +1,7 @@
+@media screen and (max-width: 475px) {
+   .navbar-collapse{
+     text-align: center;
+     color: white;
+     background-color:hsl(257, 27%, 26%);
+   }
+}
