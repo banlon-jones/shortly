@@ -1,0 +1,22 @@
+.banner {
+  background-image: url("src/assets/images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: hsl(260, 8%, 14%);
+}
+
+.banner h1 {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+  .banner {
+    background-image: url("src/assets/images/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: hsl(260, 8%, 14%);
+  }
+}
+
