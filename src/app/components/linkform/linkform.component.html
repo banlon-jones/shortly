@@ -1,69 +1,37 @@
-
-
-
-
-
-
-
-
-
 <div class="container">
   <div class="rounded mt-5 bg-card form-container">
     <div>
-      <div class="card-body p-4 text-center">
-        <form action="#">
+      <div class="card-body p-5 text-center">
+        <form [formGroup]="urlForm" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-12 col-md-10">
-              <input type="text" class="form-control"/>
-            </div>+
-
-            <div class="col-md-2 col-12 mt-2 mt-md-0">
-              <input type="submit" class="btn bg-cyan text-white col-12" value="Shorten it!"/>
+              <input type="url" class="form-control" formControlName="url" placeholder="Shorten a link here..." [ngClass]="{ 'test' : urlFormControl['url'].errors }"/>
+                <small *ngIf="(urlFormControl.url.touched || urlFormControl.url.dirty) && urlFormControl.url.invalid" class="form-text text-danger">
+                  <div  class="text-left" *ngIf="urlFormControl.url.errors?.required">
+                    Please add a link
+                  </div>
+                </small>
+            </div>
+            <div class="col-md-2 col-12 mt-3 mt-md-0">
+              <input type="submit" class="btn bg-cyan text-white col-12 submit-button" value="Shorten it!"/>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
-  <div class="m-3">
+  <div class="m-3" *ngFor="let shortenedLink of shortenedLinks">
     <div class="row bg-white rounded py-3">
-      <div class="col-12 col-md-6 px-5">
-        hfadfadfafdafasdfasdf
+      <div class="col-12 col-md-6 px-md-5">
+        {{shortenedLink.original_link}}
       </div>
-      <div class="col-12 col-md-4 px-5 text-right text-cyan">
-        hfadfadfafdafasdfasdf
+      <hr class="hide-des show-m">
+      <div class="col-12 col-md-4 px-md-5 text-right-desk text-cyan">
+        {{shortenedLink.short_link}}
       </div>
       <div class="col-12 col-md-2">
-        <button class="bg-cyan text-white btn px-5"> Copy </button>
-      </div>
-    </div>
-  </div>
-  <div class="m-3">
-    <div class="row bg-white rounded py-3">
-      <div class="col-12 col-md-6 px-5">
-        hfadfadfafdafasdfasdf
-      </div>
-      <div class="col-12 col-md-4 px-5 text-right text-cyan">
-        hfadfadfafdafasdfasdf
-      </div>
-      <div class="col-12 col-md-2">
-        <button class="bg-cyan text-white btn px-5"> Copy </button>
+        <button class="bg-cyan text-white btn px-5 text-center col-12" (click)="copyLink($event, shortenedLink.short_link)"> Copy </button>
       </div>
     </div>
   </div>
 </div>
-
-+
-+
-+
-+
-
-
-
-
-
-
-
-
-
-+

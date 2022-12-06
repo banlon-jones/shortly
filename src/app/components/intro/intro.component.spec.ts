@@ -22,4 +22,19 @@ describe('IntroComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a button', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelectorAll('button').length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('should have a get started button', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelector('button').innerText).toBe('Get Started');
+  });
+
+  it('should have title', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelector('.intro-heading').innerText).toBe('More than just shorter links');
+  });
 });

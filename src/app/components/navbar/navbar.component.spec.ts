@@ -22,4 +22,14 @@ describe('NavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have links', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelectorAll('a').length).toBeGreaterThanOrEqual(3);
+  });
+
+  it('should have image', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelectorAll('img').length).toBeGreaterThanOrEqual(1);
+  });
 });

@@ -22,4 +22,14 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have links', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelectorAll('a').length).toBeGreaterThanOrEqual(9);
+  });
+
+  it('should have social icons', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelectorAll('.social-icon').length).toBeGreaterThanOrEqual(4);
+  });
 });
