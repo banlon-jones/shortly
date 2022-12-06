@@ -22,4 +22,14 @@ describe('FeaturesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have 3 cards', () => {
+    const page = fixture.debugElement.nativeElement;
+    expect(page.querySelectorAll('.card').length).toBeGreaterThanOrEqual(3);
+  });
+
+  it('should have heading Advanced Statistics', () => {
+    const page = fixture.debugElement.nativeElement;
+    expect(page.querySelector('.feat-intro').innerText).toBe('Advanced Statistics');
+  });
 });

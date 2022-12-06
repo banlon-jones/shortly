@@ -22,4 +22,9 @@ describe('BannerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a boost heading', () => {
+    const page = fixture.nativeElement;
+    expect(page.querySelector('h1').innerText).toBe('Boost your links today');
+  });
 });

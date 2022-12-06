@@ -10,6 +10,10 @@ import { LinkformComponent } from './components/linkform/linkform.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {UrlService} from './services/url.service';
+import {ClipboardModule} from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -24,9 +28,14 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ClipboardModule
   ],
-  providers: [],
+  providers: [
+    UrlService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,13 +4,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: hsl(257, 27%, 26%);
+  z-index: 15;
 }
 
-.form-container {
-  z-index: 5;
-  margin-top: -623px;
+.text-right-desk{
+  text-align: right;
 }
 
+.test {
+  border: solid 1px hsl(0, 87%, 67%);
+}
+
+.test::placeholder {
+  color: hsl(0, 87%, 67%);
+}
 @media screen and (max-width: 375px) {
   .bg-card {
     background-image: url("src/assets/images/bg-shorten-mobile.svg");
@@ -18,5 +25,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: hsl(257, 27%, 26%);
+  }
+
+  .text-right-desk{
+    text-align: left;
   }
 }
