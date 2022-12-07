@@ -33,14 +33,17 @@ export class LinkformComponent implements OnInit {
         (response: UrlResponseEntity) => {
           console.log(response);
           this.shortenedLinks.push(response.result);
+          console.log(this.shortenedLinks);
           localStorage.setItem('shortenedLinks', JSON.stringify(this.shortenedLinks));
         }
       );
     }
-    console.log(this.urlForm);
   }
 
   getShortenLinksFromStorage(): Link[]  {
+    if (JSON.parse(localStorage.getItem('shortenedLinks') as string) === null) {
+      return [];
+    }
     return JSON.parse(localStorage.getItem('shortenedLinks') as string);
   }
 
