@@ -11,14 +11,35 @@
   text-align: right;
 }
 
-.test {
-  border: solid 1px hsl(0, 87%, 67%);
+.container {
+  position: relative;
+  margin-top: 10rem;
 }
 
-.test::placeholder {
-  color: hsl(0, 87%, 67%);
+.form-container{
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  left: 0;
 }
 @media screen and (max-width: 375px) {
+  .container {
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  .original-link{
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .form-container{
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
   .bg-card {
     background-image: url("src/assets/images/bg-shorten-mobile.svg");
     background-position: center;

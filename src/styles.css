@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: "Poppins";
-  src: url("https://fonts.google.com/specimen/Poppins");
+  src: url("assets/fonts/Poppins-Regular.ttf");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url("https://fonts.google.com/specimen/Poppins");
+  src: url("assets/fonts/Poppins-Bold.ttf");
   font-weight: 700;
 }
 
@@ -51,6 +51,9 @@ p {
 }
 
 @media screen and (max-width: 375px) {
+  .text-white-m{
+    color: white !important;
+  }
   .hide-m {
     display: none;
     visibility: hidden;

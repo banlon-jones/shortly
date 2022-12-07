@@ -1,11 +1,11 @@
 <div class="container">
-  <div class="rounded mt-5 bg-card form-container">
+  <div class="rounded mt -md-5 bg-card form-container">
     <div>
       <div class="card-body p-5 text-center">
         <form [formGroup]="urlForm" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-12 col-md-10">
-              <input type="url" class="form-control" formControlName="url" placeholder="Shorten a link here..." [ngClass]="{ 'test' : urlFormControl['url'].errors }"/>
+              <input type="url" class="form-control" formControlName="url" placeholder="Shorten a link here..." />
                 <small *ngIf="(urlFormControl.url.touched || urlFormControl.url.dirty) && urlFormControl.url.invalid" class="form-text text-danger">
                   <div  class="text-left" *ngIf="urlFormControl.url.errors?.required">
                     Please add a link
@@ -20,17 +20,22 @@
       </div>
     </div>
   </div>
-  <div class="m-3" *ngFor="let shortenedLink of shortenedLinks">
-    <div class="row bg-white rounded py-3">
-      <div class="col-12 col-md-6 px-md-5">
-        {{shortenedLink.original_link}}
-      </div>
-      <hr class="hide-des show-m">
-      <div class="col-12 col-md-4 px-md-5 text-right-desk text-cyan">
-        {{shortenedLink.short_link}}
-      </div>
-      <div class="col-12 col-md-2">
-        <button class="bg-cyan text-white btn px-5 text-center col-12" (click)="copyLink($event, shortenedLink.short_link)"> Copy </button>
+  <div class="pt-md-5"></div>
+  <div class="pt-md-5">
+    <div class="m-3" *ngFor="let shortenedLink of shortenedLinks">
+      <div class="row bg-white rounded py-3">
+        <div class="col-12 col-md-6 px-md-3">
+          <p class="original-link">
+            {{shortenedLink?.original_link}}
+          </p>
+        </div>
+        <hr class="hide-des show-m">
+        <div class="col-12 col-md-4 px-md-5 text-right-desk text-cyan">
+          {{shortenedLink?.short_link}}
+        </div>
+        <div class="col-12 col-md-2">
+          <button class="bg-cyan text-white btn px-5 text-center col-12" (click)="copyLink($event, shortenedLink.short_link)"> Copy </button>
+        </div>
       </div>
     </div>
   </div>
