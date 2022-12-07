@@ -28,8 +28,13 @@ p{
 .card-2{
   margin-top: 3rem;
 }
+
 .card-3{
   margin-top: 6rem;
+}
+
+p {
+  font-size: 18px;
 }
 @media screen and (max-width: 475px) {
   .card-icon{
