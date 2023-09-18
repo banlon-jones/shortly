@@ -1,6 +1,7 @@
 {
   "name": "shortly",
   "version": "0.0.0",
+  "homepage": "/build/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
